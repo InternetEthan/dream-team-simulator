@@ -3,7 +3,9 @@ const db = require('../config/connection');
 
 module.exports = async (modelName, collectionName) => {
   try {
-    // await db;
+    console.log(models)
+    // console.log('modelName', models[modelName]);
+    // console.log('modelName', modelName.db.db);
     let modelExists = await models[modelName].db.db.listCollections({
       name: collectionName
     }).toArray()

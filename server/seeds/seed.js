@@ -7,11 +7,11 @@ const userData =  require('./userData.json');
 const playerData = require('./playerData.json');
 
 db.once('open', async () => {
-  await cleanDB('User', 'users');
+  await cleanDB('Users', 'users');
   await cleanDB('Players', 'players');
 
-  await User.insertMany(userData);
-  await Player.insertMany(playerData);
+  await Users.insertMany(userData);
+  await Players.insertMany(playerData);
 
   console.log('Users and players seeded!');
   process.exit(0);

@@ -1,12 +1,6 @@
 const { Schema, model } = require('mongoose');
 
 const playerSchema = new Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: true,
-        auto: true,
-    },
     name: {
         type: String,
         required: true,
@@ -31,6 +25,6 @@ const playerSchema = new Schema({
     }
 );
 
-const Players = model('Players', playerSchema);
+const Players = model('Player', playerSchema);
 
 module.exports = Players;

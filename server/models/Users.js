@@ -1,12 +1,6 @@
 const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: true,
-        auto: true,
-    },
     name: {
         type: String,
         required: true,
@@ -23,6 +17,6 @@ const userSchema = new Schema({
     }
 });
 
-const Users = model('Users', userSchema);
+const Users = model('User', userSchema);
 
 module.exports = Users;
