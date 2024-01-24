@@ -3,11 +3,6 @@ import { useSelector } from 'react-redux';
 
 const Home = () => {
 
-const userData = useSelector((state) => {
-return state.users
-})
-console.log("home component", userData);
-
   return (
     <div className="">
       <div className="text-center m-3">
