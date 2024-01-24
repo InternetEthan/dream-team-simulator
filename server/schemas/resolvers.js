@@ -1,26 +1,24 @@
-// replace w/ proper seeding data/structure
-const seedUsers = [
-  { id: 1, name: 'John Doe', email: 'john@example.com', password: 'password1' },
-  { id: 2, name: 'Jane Smith', email: 'jane@example.com', password: 'password2' },
-];
+const { Users, Players } = require("../models");
 
-const users = [...seedUsers];
 
 const resolvers = {
   Query: {
-    users: () => users,
-    user: (_, { id }) => users.find(user => user.id === Number(id)),
+    users: async () => {
+      return Users.findAll({});
+    },
+    players: async () => {
+      return Players.findAll({});
+    }
   },
   Mutation: {
     addUser: (_, { name, email, password }) => {
-      console.log(name, email, password)
+    console.log(name, email, password)
       const newUser = {
-        id: users.length + 1,
+        id,
         name,
         email,
         password,
       };
-
       users.push(newUser);
       return newUser;
     },

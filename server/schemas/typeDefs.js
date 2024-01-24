@@ -5,10 +5,21 @@ const typeDefs = `
     email: String!
     password: String!
   }
-
+  type Player {
+    id: ID!
+    name: String!
+    hitCheck: Int!
+    doubleCheck: Int!
+    tripleCheck: Int!
+    homeRunCheck: Int!
+  }
   type Query {
     users: [User]
     user(id: ID!): User
+  }
+  type Query {
+    players: [Player]
+    player(id: ID!): Player
   }
 
   type Mutation {

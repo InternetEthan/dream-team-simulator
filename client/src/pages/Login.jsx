@@ -41,7 +41,7 @@ console.log("login component", userData);
         variables: {...formData}
       })
       dispatch(addUser({...formData}))
-      // navigate(`/profile/${userId}`);
+      navigate(`/profile`);
     } catch (err) {
       console.error(err);
     }
