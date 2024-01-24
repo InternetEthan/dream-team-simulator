@@ -1,4 +1,3 @@
-// schemas.js
 const typeDefs = `
   type User {
     id: ID!

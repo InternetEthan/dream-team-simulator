@@ -8,15 +8,10 @@ const usersSlice = createSlice({
     },
     reducers: {
         addUser (state, action) {
-            // console.log(state)
-            console.log("2:call reducer in slice")
-            // console.log("actions", action.payload)
             state.users.push(action.payload);
         }
     }
 })
 
-// export actions
-export const { addUser } = usersSlice.actions;
-// export slice
-export { usersSlice };
+export const { addUser } = usersSlice.actions;  // export actions
+export { usersSlice }; // export slice

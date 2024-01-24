@@ -2,11 +2,6 @@ import { Outlet } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import { addUser } from './redux/actions';
-
-// seedUsers.forEach((user) => {
-//   store.dispatch(addUser(user));
-// });
 
 const client = new ApolloClient({
   uri: '/graphql',

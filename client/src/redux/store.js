@@ -1,4 +1,3 @@
-// store.js
 import  { configureStore }  from '@reduxjs/toolkit'
 // import userReducer from './reducers';
 import { usersSlice, addUser } from './slices/usersSlice';
@@ -11,11 +10,5 @@ export const store = configureStore({
     },
 });
 
-// console.log(store.getState())
-// console.log(addUser())
-
-
-console.log("1:call dispatch")
-store.dispatch(addUser({name: 'Ethan'}))
-console.log("store data:",store.getState())
 export {addUser};
+// export {addPlayer};

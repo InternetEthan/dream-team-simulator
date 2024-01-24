@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../redux/actions';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import { addUser } from '../redux/store';
@@ -23,20 +22,14 @@ console.log("login component", userData);
   });
 
   const handleInputChange = (event) => {
-    // const { name, email, password, value } = event.target;
-    // setFormData({ ...formData, [name]: value });
-
-    console.log("event", event.target);
-    console.log(event.target.name);
-
     if (event.target.name === "name"){
       setFormData({...formData, name: event.target.value}) 
     }
     if (event.target.name === "email"){
-  setFormData({...formData, email: event.target.value}) 
+      setFormData({...formData, email: event.target.value}) 
     }
     if (event.target.name === "password"){
-  setFormData({...formData, password: event.target.value}) 
+      setFormData({...formData, password: event.target.value}) 
     }
   };
 
@@ -68,7 +61,7 @@ console.log("login component", userData);
           <label>password: </label>
           <input name="password" onChange={handleInputChange} />
           <button className="btn btn-danger" type="submit">
-            Create Matchup!
+            create account
           </button>
         </form>
       </div>
