@@ -7,4 +7,22 @@ query getUsers {
     name
   }
 }
-`
+`;
+
+export const QUERY_USER = gql`
+query user($userID: ID!) {
+  user(userID: $userID) {
+    id
+    name
+  }
+}
+`;
+
+export const QUERY_ME = gql`
+query me {
+  me {
+    _id
+    name
+  }
+}
+`;

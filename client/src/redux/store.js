@@ -1,6 +1,5 @@
 import  { configureStore }  from '@reduxjs/toolkit'
-// import userReducer from './reducers';
-import { usersSlice, addUser } from './slices/usersSlice';
+import { usersSlice, addUser, loginUser } from './slices/usersSlice';
 // import { playersSlice } from './slices/playersSlice';
 
 export const store = configureStore({
@@ -9,6 +8,5 @@ export const store = configureStore({
         // players: playersSlice.reducer
     },
 });
-
-export {addUser};
+export { addUser, loginUser };
 // export {addPlayer};

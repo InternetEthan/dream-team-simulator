@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useQuery } from '@apollo/client';
+import { QUERY_USERS } from '../utils/queries';
 
 const Home = () => {
+  const { loading, data } = useQuery(QUERY_USERS, {
+    fetchPolicy: "no-cache"
+  });
 
   return (
     <div className="">
@@ -9,6 +13,9 @@ const Home = () => {
         <h1>Let's create your Dream Team!</h1>
         <Link to="/login">
           <button className="">Login</button>
+        </Link>
+        <Link to="/signUp">
+          <button className="">Sign Up</button>
         </Link>
       </div>
     </div>

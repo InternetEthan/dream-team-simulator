@@ -25,6 +25,6 @@ const playerSchema = new Schema({
     }
 );
 
-const Players = model('Player', playerSchema);
+const Player = model('Player', playerSchema);
 
-module.exports = Players;
+module.exports = Player;
