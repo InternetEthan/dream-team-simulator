@@ -2,15 +2,18 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import { loginUser } from '../redux/slices/usersSlice';
+import { login } from '../redux/slices/usersSlice';
 
 import Auth from '../utils/auth';
 
 const Login = () => {
   const userData = useSelector((state) => {
-  return state.users
+    return state.users
   })
+
   console.log("login component", userData);
+
+
 
   const [addUserMutation, {error}] = useMutation(LOGIN_USER);
   const dispatch = useDispatch();
@@ -33,14 +36,16 @@ const handleFormSubmit = async (event) => {
         variables: { ...formData },
       });
 
-      dispatch(loginUser({ ...formData }));
+      dispatch(login({ ...formData }));
 
       // Authenticate user
       const { data } = await Auth.login(formData.email, formData.password);
+      console.log(data);
       Auth.login(data.login.token);
 
-      // Redirect to profile page
-      // navigate(`/profile`);
+
+
+
     } catch (err) {
       console.error(err);
     }

@@ -1,6 +1,6 @@
 const typeDefs = `
   type User {
-    id: ID!
+    _id: ID!
     name: String!
     email: String!
     password: String!
@@ -12,7 +12,7 @@ const typeDefs = `
   }
 
   type Player {
-    id: ID!
+    _id: ID!
     name: String!
     hitCheck: Int!
     doubleCheck: Int!

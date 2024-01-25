@@ -9,11 +9,11 @@ const usersSlice = createSlice({
         addUser (state, action) {
             state.users.push(action.payload);
         },
-        loginUser(state, action) {
-            state.users.push = action.payload;
+        login(state, action) {
+            state.users.push(action.payload);
         }
     }
 })
 
-export const { addUser, loginUser } = usersSlice.actions;  // export actions
+export const { addUser, login } = usersSlice.actions;  // export actions
 export { usersSlice }; // export slice
