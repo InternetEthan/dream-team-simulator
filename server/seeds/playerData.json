@@ -1,0 +1,23 @@
+[
+{
+    "name":"Eric",
+    "hitCheck":"15",
+    "doubleCheck":"12",
+    "tripleCheck":"14",
+    "homeRunCheck":"11"  
+},
+{
+    "name":"dave",
+    "hitCheck":"12",
+    "doubleCheck":"12",
+    "tripleCheck":"14",
+    "homeRunCheck":"11"  
+},
+{
+    "name":"mike",
+    "hitCheck":"18",
+    "doubleCheck":"12",
+    "tripleCheck":"14",
+    "homeRunCheck":"11"  
+}
+]
