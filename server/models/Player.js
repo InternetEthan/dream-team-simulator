@@ -6,6 +6,15 @@ const playerSchema = new Schema({
         required: true,
         unique: true,
     },
+    imageName: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    playerType: {
+        type: String,
+        required: true,
+    },
     hitCheck:{
         type: Number,
         required: true,
@@ -19,6 +28,10 @@ const playerSchema = new Schema({
         required: true,
     },
     homeRunCheck:{
+        type: Number,
+        required: true,
+    },
+    stealBaseCheck:{
         type: Number,
         required: true,
     },
