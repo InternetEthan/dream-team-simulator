@@ -24,7 +24,7 @@ function playTurn() {
     let currentBatter = currentTeam === 'team1' ? team1Lineup[currentBatterIndex.team1] : team2Lineup[currentBatterIndex.team2];
 
     if (isHit(currentBatter.battingAverage)) {
-        const hitType = determineHitType();
+        const hitType = determineHitType(currentBatter.hits);
         console.log(`Hit: ${hitType}`);
         moveRunners(hitType);
     } else {
@@ -35,8 +35,14 @@ function playTurn() {
 
 
 let player = {
-    battingAverage: 0.334,
-    stealRate: 0.75
+    battingAverage: [],
+    stealRate: [],
+    hits: {
+        singles: [],
+        doubles: [],
+        triples: [],
+        homeRuns: []
+    }
 };
 
 function nextBatter() {

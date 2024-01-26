@@ -19,12 +19,18 @@ function isHit(battingAverage) {
     return roll >= hitThreshold;
 }
 
-function determineHitType() {
+function determineHitType(playerHits) {
+    const totalHits = playerHits.singles + playerHits.doubles + playerHits.triples + playerHits.homeRuns;
     const roll = rollDice();
-    if (roll === 20) return 'Home Run'; // Always a home run on a roll of 20
-    if (roll <= 5) return 'Single';
-    if (roll <= 10) return 'Double';
-    if (roll <= 15) return 'Triple';
+
+    const singleThreshold = Math.ceil((playerHits.singles / totalHits) * 20);
+    const doubleThreshold = singleThreshold + Math.ceil((playerHits.doubles / totalHits) * 20);
+    const tripleThreshold = doubleThreshold + Math.ceil((playerHits.triples / totalHits) * 20);
+    // Home runs cover the remaining range
+
+    if (roll <= singleThreshold) return 'Single';
+    if (roll <= doubleThreshold) return 'Double';
+    if (roll <= tripleThreshold) return 'Triple';
     return 'Home Run';
 }
 
