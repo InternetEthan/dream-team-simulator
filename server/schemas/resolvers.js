@@ -38,13 +38,14 @@ const resolvers = {
     },
 
     login: async (parent, { email, password }) => {
-      const user = await User.findOne({ where: { email } });
-
+      // console.log(email, password)
+      const user = await User.findOne({ email } );
+      console.log(user)
       if (!user) {
         throw AuthenticationError;
       }
 
-      const correctPw = await profile.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw AuthenticationError;

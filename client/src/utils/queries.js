@@ -26,3 +26,29 @@ query me {
   }
 }
 `;
+
+export const QUERY_PLAYERS = gql`
+query getPlayers {
+  players {
+    _id
+    name
+    hitCheck
+    doubleCheck
+    tripleCheck
+    homeRunCheck
+  }
+}
+`;
+
+export const QUERY_PLAYER = gql`
+query player($playerID: ID!) {
+  player(playerID: $playerID) {
+    _id
+    name
+    hitCheck
+    doubleCheck
+    tripleCheck
+    homeRunCheck
+  }
+}
+`;
