@@ -10,12 +10,9 @@ const Login = () => {
 
   const handleInputChange = (event) => {
     if (event.target.name === "email"){
-      console.log(event.target.value)
       setFormData({...formData, email: event.target.value})
-      console.log(formData)
     }
     if (event.target.name === "password"){
-      console.log(event.target.value)
       setFormData({...formData, password: event.target.value}) 
     }
   };
@@ -46,13 +43,15 @@ const Login = () => {
       </div>
       <div className="card-body m-5">
           <form onSubmit={handleFormSubmit}>
-            <label>email: </label>
+            <label> email: </label>
             <input value={formData.email} name="email" onChange={handleInputChange} />
-            <label>password: </label>
+            <label> password: </label>
             <input value={formData.password} name="password" onChange={handleInputChange} />
+            <div className='submitContainer'>
             <button className="btn btn-danger" type="submit">
               Login
             </button>
+            </div>
           </form>
       </div>
     </div>

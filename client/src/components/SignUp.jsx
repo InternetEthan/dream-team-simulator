@@ -68,11 +68,13 @@ console.log("singup component", userData);
           <input name="name" onChange={handleInputChange} />
           <label>email: </label>
           <input name="email" onChange={handleInputChange} />
-          <label>password: </label>
+          <label> password: </label>
           <input name="password" onChange={handleInputChange} />
+          <div className='submitContainer'>
           <button className="btn btn-danger" type="submit">
             create account
           </button>
+          </div>
         </form>
       </div>
     </div>
