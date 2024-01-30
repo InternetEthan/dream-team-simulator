@@ -41,7 +41,7 @@ button:hover {
     align-items: center;
     padding: 20px;
     border-radius: 5px;
-    height: 100vh;
+    /* height: 100vh; */
     text-align: center;
     background-image: linear-gradient(rgb(21, 31, 67), rgb(66, 104, 216));
 }
@@ -87,4 +87,10 @@ li a:hover {
     color: rgb(55, 80, 165);
     color: white;
     background-color: rgb(39, 57, 117);
+}
+
+
+.submitContainer {
+    display: flex;
+    justify-content: center;
 }
