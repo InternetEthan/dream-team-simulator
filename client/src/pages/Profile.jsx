@@ -1,6 +1,7 @@
 import NavBar from '../components/Nav';
 import '../Styles/Home.css';
 
+
 const Profile = () => {
     return (
         <div className="center-container">
