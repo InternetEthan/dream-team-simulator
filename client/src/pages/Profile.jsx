@@ -1,8 +1,19 @@
 import NavBar from '../components/Nav';
 import '../Styles/Home.css';
 
+import Auth from '../utils/auth';
+
 
 const Profile = () => {
+
+if (!Auth.loggedIn()) {
+    console.log("not logged in");
+    window.location.assign('/login');
+    return false;
+} else {
+    console.log("logged in");
+}
+
     return (
         <div className="center-container">
             <div className="text-center m-3">
