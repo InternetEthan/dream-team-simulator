@@ -40,7 +40,7 @@ const Login = () => {
   };
 
   return (
-    <div className="card bg-white card-rounded w-25">
+    <div className="card bg-gray card-rounded w-25">
       <div className="card-header bg-dark text-center">
         <h1>Let's Login!</h1>
       </div>
