@@ -4,6 +4,7 @@ import { QUERY_USERS } from '../utils/queries';
 import Login from '../components/Login';
 import SignUp from '../components/SignUp';
 
+
 const Home = () => {
   const { loading, data } = useQuery(QUERY_USERS, {
     fetchPolicy: "no-cache"

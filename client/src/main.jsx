@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile.jsx';
 import NotFound from './pages/NotFound';
 // import SignUp from './pages/SignUp.jsx';
+import Playball from './pages/Playball.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,10 +18,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />
-      }, // {
-      //   path: '/login',
-      //   element: <Login />
-      // }, {
+      }, {
+         path: '/playball',
+        element: <Playball />
+       }, 
       //   path: '/signUp',
       //   element: <SignUp />
        // }
