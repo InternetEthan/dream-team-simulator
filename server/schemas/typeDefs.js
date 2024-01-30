@@ -14,11 +14,15 @@ const typeDefs = `
   type Player {
     _id: ID!
     name: String!
+    imageName: String!
+    playerType: String!
     hitCheck: Int!
     doubleCheck: Int!
     tripleCheck: Int!
     homeRunCheck: Int!
+    stealBaseCheck: Int!
   }
+
   type Query {
     users: [User]!
     user(userId: ID!): User
