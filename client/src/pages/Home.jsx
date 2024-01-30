@@ -19,7 +19,7 @@ const [isSignUp, setSignUp] = useState(false);
   return (
     <div className="center-container">
       <div className="text-center m-3">
-        <div><NavBar/></div>
+      <div><NavBar/></div>
         <img src={logo} width={350} height={350} alt="logo"/>
         <h1>Let's create your Dream Team!</h1>
           <div className="button-container">
