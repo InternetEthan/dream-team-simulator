@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Home from './pages/Home';
 // import Login from './pages/Login';
-import Profile from './pages/Profile.jsx';
+import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 // import SignUp from './pages/SignUp.jsx';
 
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       //   element: <SignUp />
        // }
        {
-        path: '/me',
+        path: '/profile',
         element: <Profile />
       }, {
         path: '/profiles/:profileId',
